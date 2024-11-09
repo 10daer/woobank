@@ -47,7 +47,7 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="navbar flex w-full items-center justify-between py-6 md:py-10">
+    <nav className="navbar flex w-full items-center justify-between py-6 md:py-3">
       <img
         src={logo}
         alt="hoobank"
