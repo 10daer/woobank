@@ -14,11 +14,11 @@ const Navbar = () => {
     },
     animate: {
       y: "0%",
-      transition: { duration: 1, ease: [0.64, 0, 0.36, 1] },
+      transition: { duration: 0.5, ease: [0.64, 0, 0.36, 1] },
     },
     exit: {
       y: "100%",
-      transition: { duration: 1.5, delay: 0.5, ease: [0.64, 0, 0.36, 1] },
+      transition: { duration: 0.3, delay: 0.025, ease: [0.64, 0, 0.36, 1] },
     },
   };
 
@@ -32,22 +32,22 @@ const Navbar = () => {
       opacity: 1,
       y: "0",
       x: "0%",
-      transition: { duration: 1, ease: [0.76, 0, 0.24, 1], delay: 0.05 * i },
+      transition: { duration: 0.5, ease: [0.76, 0, 0.24, 1], delay: 0.05 * i },
     }),
     exit: (i) => ({
       opacity: 0,
       y: "80%",
       x: "100%",
       transition: {
-        duration: 1.25,
+        duration: 0.25,
         ease: [0.76, 0, 0.24, 1],
-        delay: 0.15 * -i,
+        delay: 0.025 * -i,
       },
     }),
   };
 
   return (
-    <nav className="navbar flex w-full items-center justify-between py-6 md:py-3">
+    <nav className="navbar flex w-full items-center justify-between py-5 md:py-3">
       <img
         src={logo}
         alt="hoobank"
@@ -82,7 +82,7 @@ const Navbar = () => {
               animate="animate"
               exit="exit"
               initial="initial"
-              className="bg-black-gradient fixed right-0 top-20 z-10 h-[calc(100vh-80px)] w-screen p-6"
+              className="bg-black-gradient fixed right-0 top-16 z-10 h-[calc(100vh-64px)] w-screen p-6"
             >
               <ul className="flex h-[50%] list-none flex-col items-start justify-between">
                 {navLinks.map((nav, index) => (

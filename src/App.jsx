@@ -30,11 +30,13 @@ const App = () => {
 
   return (
     <div className="w-full overflow-hidden bg-primary">
-      <div className={`div sm:px-10 ${styles.boxWidth} ${styles.flexCenter}`}>
+      <div
+        className={`div sm:px-10 ${styles.paddingX} ${styles.boxWidth} ${styles.flexCenter}`}
+      >
         <Navbar />
       </div>
 
-      <div className={`mt-20 bg-primary xs:mt-8 ${styles.flexStart}`}>
+      <div className={`mt-16 bg-primary sm:mt-8 ${styles.flexStart}`}>
         <div className={`${styles.boxWidth} ${styles.paddingX}`}>
           <Hero />
         </div>
